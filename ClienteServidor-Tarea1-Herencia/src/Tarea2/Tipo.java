@@ -8,13 +8,16 @@ package Tarea2;
  *
  * @author axelc
  */
-public class Main {
-    public static void main(String[] args) {
-        
-        Empleado empleado = new Empleado(20,30,40);
-        empleado.buscar(20);
-        
-        Cliente cliente = new Cliente(50,"Semanal");
-        cliente.tipoEmpleo();
+public abstract class Tipo {
+    private String tipo;
+
+    public Tipo(String tipo) {
+        this.tipo = tipo;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+    
+    public abstract String tipoEmpleo();
 }
